@@ -215,6 +215,8 @@ pip-log.txt
 .mr.developer.cfg
 
 *.o
+*.ko
+
 *.IAB
 *.IAD
 *.IMB
@@ -226,3 +228,5 @@ pip-log.txt
 *.PS
 *.SearchResults
 *.WK3
+
+.svn/
