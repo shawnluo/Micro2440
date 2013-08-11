@@ -215,3 +215,14 @@ pip-log.txt
 .mr.developer.cfg
 
 *.o
+*.IAB
+*.IAD
+*.IMB
+*.IMD
+*.PFI
+*.PO
+*.PR
+*.PRI
+*.PS
+*.SearchResults
+*.WK3
