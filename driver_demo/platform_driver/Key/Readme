@@ -1,0 +1,8 @@
+1. make
+2. insmod driver.ko
+3. insmod device.ko
+4. ls /sys/bus/platform/device     will see "my_buttons"
+5. ls /sys/bus/platform/driver     will see "my_buttons"
+
+6. ./app_demo      if you press key, the numbers will show on terminal
+
