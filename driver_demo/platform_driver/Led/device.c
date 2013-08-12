@@ -3,8 +3,8 @@
 
 #include <linux/platform_device.h>
 
-#include <asm/arch/regs-gpio.h>
-#include <asm/arch/leds-gpio.h>
+//#include <asm/arch/regs-gpio.h>
+//#include <asm/arch/leds-gpio.h>
 
 static void led_dev_release(struct device *dev)
 {

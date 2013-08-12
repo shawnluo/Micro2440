@@ -216,6 +216,15 @@ pip-log.txt
 
 *.o
 *.ko
+*.mod.c
+*.mod.o
+*.symvers
+*.order
+*.o.cmd
+*.o.d
+*.ko.cmd
+.tmp_versions/
+
 
 *.IAB
 *.IAD

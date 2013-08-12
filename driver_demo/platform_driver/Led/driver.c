@@ -2,8 +2,8 @@
 #include <linux/init.h>
 
 #include <linux/platform_device.h>
-#include <asm/arch/regs-gpio.h>
-#include <asm/arch/leds-gpio.h>
+//#include <asm/arch/regs-gpio.h>
+//#include <asm/arch/leds-gpio.h>
 
 int led_driver_probe(struct platform_device *pdev)
 {
