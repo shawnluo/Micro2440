@@ -1,0 +1,31 @@
+1. vim arch/arm/mach-s3c2440/mach-mini2440.c
+
+2. 在struct platform_device *mini2440_devices[]中添加&s3c_device_led,如下:
+   static struct platform_device *mini2440_devices[] __initdata = {
+		&s3c_device_wdt,
+		&s3c_device_led,
+   }
+
+3. arch/arm/plat-s3c24xx/devs.c中添加下面的struct platform_device s3c_device_led文件
+static struct resource s3c_led_resource[] = { 
+    [0] = { 
+        .start = 0x56000000,
+        .end   = 0x560000ff,
+        .flags = IORESOURCE_MEM,		//IO资源为MEM类型
+    }   
+
+};
+
+struct platform_device s3c_device_led = { 
+    .name         = "plat-led",
+    .id           = -1, 
+    .num_resources    = 1,
+    .resource     = s3c_led_resource,
+};
+
+EXPORT_SYMBOL(s3c_device_led);
+
+4. 注意查看platform_match函数来得知device和driver如何匹配?
+	在arch/arm/plat-s3c/include/plat/devs.h中添加下面的申明:
+	extern struct platform_device s3c_device_led;
+
